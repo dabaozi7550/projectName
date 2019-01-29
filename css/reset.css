@@ -1,0 +1,56 @@
+@charset "utf-8";
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6, pre, code,
+form, fieldset, legend, input, button, 
+textarea, p, blockquote, th, td {margin:0;padding:0;}
+fieldset, img {border:none;}
+/* remember to define focus styles! */
+:focus {outline:0;}
+address, caption, cite, code, dfn,
+i,em, th, var, optgroup {font-style:normal;font-weight:normal !important;}
+h1, h2, h3, h4, h5, h6 {font-size:100%;font-weight:normal;}
+abbr, acronym {border:none;font-variant:normal;}
+input, button, textarea,
+select, optgroup, option {font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;*font-family:"Microsoft YaHei",Arial;resize: none;}
+code, kbd, samp, tt {font-size: 100%;}
+button{cursor: pointer;}
+/*@purpose To enable resizing for IE */
+/*@branch For IE6-Win, IE7-Win */
+input, button, textarea, select {*font-size: 100%;outline:none;border:none;background: none;}
+ul,li{list-style: none;}
+/* tables still need 'cellspacing="0"' in the markup */
+table{border-collapse:collapse;border-spacing:0;
+/*表格自动换行*/
+table-layout:fixed;word-wrap:break-word;word-break: break-all;}
+caption, th{text-align:center;}
+/*caption, th {text-align: left;}*/
+sup, sub {font-size: 100%;vertical-align: baseline;}
+/* remember to highlight anchors and inserts somehow! */
+:link, :visited , ins {text-decoration: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}
+/*------------浮动-----------------*/
+.clear{ clear:both; height:0; font-size:0; overflow:hidden; line-height:0;}
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+.clearfix:after { clear: both; }  
+.clearfix { zoom: 1; }
+.fl{float:left;}
+.fr{float:right;}
+html{background: #ccc;}
+body{font-family:"Arial","microsoft yahei","微软雅黑","simsun"; position: relative; overflow-x: hidden;}
+/*弹框*/
+#showModal{position: fixed;left:50%;-webkit-transform: translateX(-50%);-ms-transform: translateX(-50%);transform: translateX(-50%);top:0;width: 100%;max-width: 640px;height: 100%;z-index: 100000;text-align: center;color:#fff;}
+.showModalBox{width: 2.5rem;padding:.4rem;background: rgba(0,0,0,.8);position: relative;margin:0 auto;top:50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);border-radius: .1rem;}
+.showModalBox.iconBox{width: 1.5rem;}
+.showModalBox span{position: absolute;top:0;right:0;font-size: .4rem;cursor: pointer;padding:0 .05rem;}
+.showModalBox i{display: block;width: .7rem;height: .7rem;margin:0 auto;font-size: .6rem;}
+.showModalBox p{padding-top: .15rem;font-size:.26rem;line-height: .34rem;}
+#showModal .showModal_box{width:auto;background: rgba(0,0,0,.8);padding:.3rem .4rem;position: absolute;top:50%;left:50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);font-size:.26rem;border-radius: .1rem;}
+#confirmModal{position: fixed;width: 100%;height: 100%;left:0;top:0;background: rgba(0,0,0,.2);z-index: 100000;text-align: center;}
+#confirmModal .confirmModalBox{width: 4.2rem;background: rgba(0,0,0,.85);color:#fff;position: absolute;top:50%;left:50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);border-radius: .1rem;}
+#confirmModal h3{font-size: .32rem;padding-top: .35rem;}
+#confirmModal p{font-size: .24rem;padding:.3rem .4rem;line-height: 1.5;}
+#confirmModal .button{font-size: 0;border-top: 1px solid #ccc;}
+#confirmModal .button div{display: inline-block;width: 50%;height: .7rem;line-height: .7rem;font-size: .32rem;vertical-align: top;-moz-box-sizing: border-box;box-sizing: border-box;}
+#confirmModal .button div:last-child{border-left: 1px solid #ccc;color: #ff6c00;}
